@@ -1,7 +1,7 @@
 # TC4-Emulator
 Very small Example how to send Temperature Data from an Arduino to Artisan Roast Software using the TC4 protocol. (https://github.com/artisan-roaster-scope/artisan)
 
-#Artisan Setup
+# Artisan Setup
 - Goto Config 
 - Goto Device 
 - Select TC4 Radio Button 
