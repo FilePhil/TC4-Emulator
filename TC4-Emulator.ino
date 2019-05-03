@@ -5,15 +5,16 @@
 
 bool unit_F = false; //true = °F - false = °C
 
+//Set Chip Select Pins
 const int thermoACs = 28;
 const int thermoBCs = 29;
-
-const int spiClk = 21;
-const int spiDo = 23;
 
 const long BAUD = 115200;
 
 // Use this for Software SPI
+//Set SPI Pins
+//const int spiClk = 21;
+//const int spiDo = 23;
 //Adafruit_MAX31855 thermoA(spiClk, thermoACs, spiDo);
 //Adafruit_MAX31855 thermoB(spiClk, thermoBCs, spiDo);
 
@@ -46,7 +47,8 @@ double readThermoCouple(Adafruit_MAX31855 &thermo)
     }
 }
 
-void handleSerialCommand(){   //Parsing Serial Commands
+//Parsing Serial Commands
+void handleSerialCommand(){   
 
     if (Serial.available()>0){
         String msg = Serial.readStringUntil('\n');
@@ -73,7 +75,7 @@ void handleSerialCommand(){   //Parsing Serial Commands
    }
 
 }
-
+//Send Data
 void Command_READ(){    
     Serial.print("0.00,");
     Serial.print(tempA);
@@ -81,8 +83,6 @@ void Command_READ(){
     Serial.print(tempB);
     Serial.println(",0.00,0.00");
 }
-
-
 
 
 void setup() {
