@@ -1,5 +1,6 @@
 # TC4-Emulator
 Very small Example how to send Temperature Data from an Arduino to Artisan Roast Software using the TC4 protocol. (https://github.com/artisan-roaster-scope/artisan)
+For Temperaure reading the Arduino Libary Adafruit_MAX31855 is used.
 
 # Artisan Setup
 - Goto Config 
