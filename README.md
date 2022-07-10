@@ -11,5 +11,13 @@ For Temperaure reading the Arduino Libary Adafruit_MAX31855 is used.
 - Set Baud: 115200
 - Click "OK"
 
-Done.
+# Additional Information TC4 Protocol
+Artisan sends commands to request settings or data. 
+The values must be in a fixed order and syntax.
+See "handleSerialCommand" and "Command_READ" functions.
 
+The "0.00" in the "Command_READ" functions are unused data channels, that can be replaced by actual values.
+The first channel is used for environmental temperatur and can not be used freely in Artisan.
+
+Any serial output other than the expected "#OK.." from the settings commands 
+and the output of the "Command_READ" function will cause issues in Artisan.
